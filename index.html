@@ -1,29 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Name - Professional Services</title>
+    <title>Client Name - Professionelle Dienstleistungen</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="progress-bar"></div>
+    
     <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <strong>Client</strong>Name
+                </a>
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">Über uns</a>
+                    <a href="services.html">Leistungen</a>
+                    <a href="gallery.html">Galerie</a>
+                    <a href="contact.html">Kontakt</a>
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
     
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Willkommen bei <span style="color: var(--primary-color);">Client Name</span></h1>
+                <p>Professionelle Dienstleistungen, die Ihre Bedürfnisse erfüllen und Ihre Erwartungen übertreffen.</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn">Unsere Leistungen</a>
+                    <a href="contact.html" class="btn btn-outline">Kontakt aufnehmen</a>
+                </div>
+            </div>
+        </div>
+        <img src="images/hero-image.svg" alt="Hero Illustration" class="hero-image">
+    </section>
+    
     <main>
-        <h1>Welcome to Client Name</h1>
-        <p>Professional services that meet your needs.</p>
-        <!-- More content here -->
+        <div class="container">
+            <section class="features reveal">
+                <h2 class="section-title">Warum uns wählen?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Qualität</h3>
+                        <p>Unsere Dienstleistungen erfüllen höchste Qualitätsstandards.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Erfahrung</h3>
+                        <p>Über 10 Jahre Erfahrung in der Branche.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Kundenzufriedenheit</h3>
+                        <p>Über 95% zufriedene Kunden empfehlen uns weiter.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="services-highlight reveal">
+                <h2 class="section-title">Unsere Top-Dienstleistungen</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="images/service1.jpg" alt="Service 1">
+                        <div class="service-content">
+                            <h3>Dienstleistung Eins</h3>
+                            <p>Beschreibung Ihrer ersten Dienstleistung. Erklären Sie die Vorteile und was sie einzigartig macht.</p>
+                            <a href="services.html" class="btn">Mehr erfahren</a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <img src="images/service2.jpg" alt="Service 2">
+                        <div class="service-content">
+                            <h3>Dienstleistung Zwei</h3>
+                            <p>Beschreibung Ihrer zweiten Dienstleistung. Erklären Sie die Vorteile und was sie einzigartig macht.</p>
+                            <a href="services.html" class="btn">Mehr erfahren</a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <img src="images/service3.jpg" alt="Service 3">
+                        <div class="service-content">
+                            <h3>Dienstleistung Drei</h3>
+                            <p>Beschreibung Ihrer dritten Dienstleistung. Erklären Sie die Vorteile und was sie einzigartig macht.</p>
+                            <a href="services.html" class="btn">Mehr erfahren</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="testimonial-section reveal">
+                <h2 class="section-title">Das sagen unsere Kunden</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <p>"Ich bin äußerst zufrieden mit den Dienstleistungen. Das Team war professionell, pünktlich und hat qualitativ hochwertige Arbeit geleistet."</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <img src="images/client1.jpg" alt="Client 1">
+                            </div>
+                            <div class="client-details">
+                                <h4>Max Mustermann</h4>
+                                <p>Geschäftsführer, Firma XYZ</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Die Zusammenarbeit war hervorragend. Von der ersten Beratung bis zur Umsetzung wurden alle meine Erwartungen übertroffen."</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <img src="images/client2.jpg" alt="Client 2">
+                            </div>
+                            <div class="client-details">
+                                <h4>Anna Schmidt</h4>
+                                <p>Marketing Direktorin, Unternehmen ABC</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Ich kann diese Dienstleistungen nur empfehlen. Das Team hat alles getan, um sicherzustellen, dass meine Bedürfnisse erfüllt wurden."</p>
+                        </div>
+                        <div class="client-info">
+                            <div class="client-avatar">
+                                <img src="images/client3.jpg" alt="Client 3">
+                            </div>
+                            <div class="client-details">
+                                <h4>Thomas Müller</h4>
+                                <p>Projektleiter, Unternehmen DEF</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-nav">
+                        <span class="slider-dot active"></span>
+                        <span class="slider-dot"></span>
+                        <span class="slider-dot"></span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="cta-section reveal">
+                <div class="cta-content">
+                    <h2>Bereit, mit uns zusammenzuarbeiten?</h2>
+                    <p>Kontaktieren Sie uns noch heute für eine kostenlose Beratung.</p>
+                    <a href="contact.html" class="btn">Jetzt anfragen</a>
+                </div>
+            </section>
+        </div>
     </main>
     
     <footer>
-        <p>&copy; 2025 Client Name. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Über uns</h3>
+                    <p>Client Name bietet professionelle Dienstleistungen mit Fokus auf Qualität und Kundenzufriedenheit.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Schnelllinks</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="services.html">Leistungen</a></li>
+                        <li><a href="gallery.html">Galerie</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Musterstraße 123, 12345 Stadt</li>
+                        <li><i class="fas fa-phone"></i> +49 123 456789</li>
+                        <li><i class="fas fa-envelope"></i> info@clientname.de</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Client Name. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
     </footer>
     <script src="js/main.js"></script>
 </body>
