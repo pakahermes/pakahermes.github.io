@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Client Name</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Additional gallery-specific styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        
+        .gallery-caption h3 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+        }
+        
+        .gallery-caption p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Our Work Gallery</h1>
+        <p>Browse through our portfolio of completed projects and success stories.</p>
+        
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="category1">Category 1</button>
+            <button class="filter-btn" data-filter="category2">Category 2</button>
+            <button class="filter-btn" data-filter="category3">Category 3</button>
+        </div>
+        
+        <div class="gallery-grid">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item" data-category="category1">
+                <img src="images/gallery1.jpg" alt="Project 1">
+                <div class="gallery-caption">
+                    <h3>Project Title 1</h3>
+                    <p>Brief description of the project</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item" data-category="category1">
+                <img src="images/gallery2.jpg" alt="Project 2">
+                <div class="gallery-caption">
+                    <h3>Project Title 2</h3>
+                    <p>Brief description of the project</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item" data-category="category2">
+                <img src="images/gallery3.jpg" alt="Project 3">
+                <div class="gallery-caption">
+                    <h3>Project Title 3</h3>
+                    <p>Brief description of the project</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item" data-category="category2">
+                <img src="images/gallery4.jpg" alt="Project 4">
+                <div class="gallery-caption">
+                    <h3>Project Title 4</h3>
+                    <p>Brief description of the project</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item" data-category="category3">
+                <img src="images/gallery5.jpg" alt="Project 5">
+                <div class="gallery-caption">
+                    <h3>Project Title 5</h3>
+                    <p>Brief description of the project</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 6 -->
+            <div class="gallery-item" data-category="category3">
+                <img src="images/gallery6.jpg" alt="Project 6">
+                <div class="gallery-caption">
+                    <h3>Project Title 6</h3>
+                    <p>Brief description of the project</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Client Name. All rights reserved.</p>
+    </footer>
+    
+    <!-- JavaScript for gallery filtering -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to current button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filter gallery items
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
